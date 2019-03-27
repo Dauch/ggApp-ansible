@@ -1,6 +1,6 @@
 ---
 - name: git clone...
-  command: "git clone --recursive {{ggApp_url}} {{appName}}"
+  command: "git clone --recursive {{landload_url}} {{appName}}"
   args:
     chdir: "{{home}}"
     creates: "{{home}}/{{appName}}"

@@ -5,5 +5,3 @@
       - install/openresty
       - install/lua
       - install/luarocks
-      - install/redis
-      - install/mongodb

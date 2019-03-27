@@ -3,7 +3,7 @@ usage="Usage:\n
 	sh shell/pack.sh <path> [packname]\n
 	e.g:\n
 		sh shell/pack.sh .\n
-		sh shell/pack.sh ~/ggApp/gamesrv"
+		sh shell/pack.sh ~/landload/gamesrv"
 
 if [ $# -lt 1 ]; then
 	echo -e $usage

@@ -3,9 +3,9 @@ usage="Usage:\n
 	sh shell/packpatch.sh <path> <revision range> [packname]\n
 	e.g:\n
 		# default consider repository is git\n
-		sh shell/packpatch.sh ~/ggApp/gamesrv HEAD~2..HEAD\n
+		sh shell/packpatch.sh ~/landload/gamesrv HEAD~2..HEAD\n
 		# -s means svn\n
-		sh shell/packpatch.sh -s ~/ggApp/gamesrv 530:532"
+		sh shell/packpatch.sh -s ~/landload/gamesrv 530:532"
 
 is_git=1
 while getopts s opt; do
