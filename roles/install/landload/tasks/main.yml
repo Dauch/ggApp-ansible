@@ -1,7 +1,23 @@
 ---
-- name: git clone...
-  command: "git clone --recursive {{landload_url}} {{appName}}"
+- name: archive...
+  command: tar {{TAR_FLAGS}} -zcvf /tmp/{{appName}} .
   args:
-    chdir: "{{home}}"
-    creates: "{{home}}/{{appName}}"
+    chdir: "{{landload_url}}"
+    creates: "{{landload_workspace}}"
 
+- name: copy...
+  copy:
+    src: "/tmp/{{appName}}"
+    dest: "/tmp/{{appName}}"
+    mode: 0644
+
+- name: try create {{landload_workspace}}
+  command: mkdir -p {{landload_workspace}}
+  args:
+    creates: "{{landload_workspace}}"
+
+- name: unarchive...
+  unarchive:
+    remote_src: yes
+    src: "/tmp/{{appName}}"
+    dest: "{{landload_workspace}}"
