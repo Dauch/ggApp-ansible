@@ -1,23 +1,7 @@
 ---
-- name: archive...
-  command: tar {{TAR_FLAGS}} -zcvf /tmp/{{appName}} .
-  args:
-    chdir: "{{landload_url}}"
-    creates: "{{landload_workspace}}"
-
-- name: copy...
-  copy:
-    src: "/tmp/{{appName}}"
-    dest: "/tmp/{{appName}}"
-    mode: 0644
-
-- name: try create {{landload_workspace}}
-  command: mkdir -p {{landload_workspace}}
-  args:
-    creates: "{{landload_workspace}}"
-
-- name: unarchive...
-  unarchive:
-    remote_src: yes
-    src: "/tmp/{{appName}}"
+- name: Synchronize passing in extra rsync options
+  synchronize:
+    src: "{{landload_url}}"
     dest: "{{landload_workspace}}"
+    rsync_opts:
+      - "--exclude=.git/"

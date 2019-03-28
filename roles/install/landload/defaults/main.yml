@@ -2,6 +2,6 @@
 home: $HOME
 appName: "landload.test"
 TAR_FLAGS: "--exclude=.svn --exclude=.git --exclude=*.o --exclude=*.pyc --exclude=log --exclude=logs"
-landload_url: "~/lanloard/{{appName}}"
-landload_workspace: "{{home}}/{{appName}}"
+landload_url: "~/landloard/{{appName}}/"
+landload_workspace: "~/{{appName}}/"
 

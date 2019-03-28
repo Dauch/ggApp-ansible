@@ -4,7 +4,6 @@
   args:
       chdir: "{{landload_workspace}}"
       creates: "{{landload_workspace}}/{{inventory_hostname}}"
-  when: ansible_host == "127.0.0.1"
 
 - name: mkdir log...
   command: mkdir -p log
