@@ -1,0 +1,8 @@
+# 外网正式环境服务器
+# hosts
+[hosts]
+gamesrv_stable_1 ansible_host=47.111.29.137
+
+# groups
+[gamesrv]
+gamesrv_stable_1

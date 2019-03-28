@@ -1,8 +1,8 @@
 # 外网测试环境服务器
 # hosts
 [hosts]
-gamesrv_200 ansible_host=47.111.29.137
+gamesrv_test_1 ansible_host=47.99.63.91
 
 # groups
 [gamesrv]
-gamesrv_200
+gamesrv_test_1
