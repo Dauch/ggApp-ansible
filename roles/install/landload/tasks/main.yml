@@ -1,7 +1,12 @@
 ---
-- name: Synchronize passing in extra rsync options
+- name: Synchronize {{landload_url}} to {{landload_workspace}}
   synchronize:
     src: "{{landload_url}}"
     dest: "{{landload_workspace}}"
     rsync_opts:
       - "--exclude=.git/"
+
+- name: change {{landload_workspace}}/gamesrv/skynet/3rd/jemalloc permission
+  command: chmod -R +x jemalloc
+  args:
+    chdir: "{{landload_workspace}}/gamesrv/skynet/3rd"
